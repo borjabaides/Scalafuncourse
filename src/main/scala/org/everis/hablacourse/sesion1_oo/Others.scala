@@ -17,11 +17,23 @@ class Others extends FunSpec with Matchers {
   abstract class Coche(_doors: Int) extends Vehiculo {
     val doors: Int = _doors
     val radio: Boolean
+    def color: String
+    def price: Double
+    def passengers: Int
+    def wheels: Int
+    def sign: String
+    def model: String
   }
   // clase moto
   abstract class Moto() extends Vehiculo {
     val radio: Boolean
     val handlebar: Boolean
+    def color: String
+    def price: Double
+    def passengers: Int
+    def wheels: Int
+    def sign: String
+    def model: String
   }
 
   // Constructor

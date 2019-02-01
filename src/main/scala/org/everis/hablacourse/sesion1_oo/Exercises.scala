@@ -40,7 +40,12 @@ class Exercises extends FunSpec with Matchers {
   // Create a fruit with any `color` using `Fruit.create` and a banana of
   // any `price` using Banana class' constructor.
   lazy val kiwi: Fruit = Fruit.create("green")
-  lazy val banana: Banana = new Banana(9.0)
+  lazy val banana: Banana = new Banana(4.3)
+  lazy val orange: Fruit = new Fruit {
+    override def color: String = "orange"
+
+    override def price: Double = 5.2
+  }
 
 
   println("El precio de las bananas es de: " + banana.price)
@@ -48,6 +53,10 @@ class Exercises extends FunSpec with Matchers {
 
   println("El color de los kiwis es " + kiwi.color)
   println("A precio: " + kiwi.price)
+
+  println("El valor de la naraja es: " + orange.price)
+  println("El color: " + orange.color)
+  
 
   // Tests are ignored, once you've finished the correspondent PARTs,
   // you can start changing `ignore` to `it` to activate them.
